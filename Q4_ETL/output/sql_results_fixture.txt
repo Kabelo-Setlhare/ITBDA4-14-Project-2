@@ -1,0 +1,31 @@
+ rating | n_books | avg_price | min_price | max_price | avg_stock 
+--------+---------+-----------+-----------+-----------+-----------
+      1 |       9 |     42.95 |     25.02 |     54.17 |      12.3
+      2 |       9 |     38.32 |     16.19 |     55.63 |      13.7
+      3 |       6 |     18.83 |     10.76 |     30.91 |      10.2
+      4 |      11 |     37.40 |     14.30 |     59.42 |       9.9
+      5 |       4 |     31.21 |     22.42 |     39.70 |       9.5
+(5 rows)
+
+ category | n_books | avg_price | stock_value | pct_of_total_value | value_rank 
+----------+---------+-----------+-------------+--------------------+------------
+ History  |       7 |     36.55 |     3597.36 |               23.2 |          1
+ Business |       5 |     36.13 |     2782.58 |               17.9 |          2
+ Mystery  |       6 |     36.20 |     2599.57 |               16.8 |          3
+ Fiction  |       7 |     42.34 |     2503.02 |               16.1 |          4
+ Poetry   |       8 |     33.67 |     2480.12 |               16.0 |          5
+ Travel   |       3 |     27.23 |     1137.14 |                7.3 |          6
+ Science  |       3 |     26.54 |      402.59 |                2.6 |          7
+(7 rows)
+
+ category |            title             | price_gbp | rating 
+----------+------------------------------+-----------+--------
+ Business | The Ember of Garden Road     |     56.67 |      4
+ Fiction  | The Winter of Atlas Light    |     57.90 |      4
+ History  | The Orchard of Midnight Code |     55.63 |      2
+ Mystery  | The Compass of Harvest Light |     54.17 |      1
+ Poetry   | The Midnight of Mirror Light |     59.42 |      4
+ Science  | The Winter of Silent Code    |     35.99 |      4
+ Travel   | The Midnight of Orchard Code |     42.38 |      1
+(7 rows)
+

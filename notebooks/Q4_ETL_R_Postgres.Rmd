@@ -1,0 +1,21 @@
+---
+title: "Question 4 - ETL with R and PostgreSQL"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+knitr::opts_knit$set(root.dir = normalizePath("../Q4_ETL"))
+```
+
+## 4.1 / 4.2 Scrape, clean, impute, export
+```{r etl, results='hold'}
+system2("Rscript", "etl_scrape.R")
+```
+
+## 4.3 Load into PostgreSQL and analyse (bash)
+```{bash sql}
+createdb bookstore 2>/dev/null || true
+psql -d bookstore -f sql/01_create_and_load.sql
+psql -d bookstore -f sql/02_analysis.sql
+```

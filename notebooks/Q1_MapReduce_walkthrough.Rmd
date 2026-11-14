@@ -1,0 +1,25 @@
+---
+title: "Question 1 - Hadoop MapReduce keyword location search"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_knit$set(root.dir = normalizePath("../Q1_MapReduce"))
+```
+
+## 1.1 Logical layout
+```{r diagram, out.width="100%"}
+knitr::include_graphics(normalizePath("diagram/mapreduce_logical_layout.png"))
+```
+
+## 1.2-1.4 Build and run (needs Hadoop + Maven)
+```{bash run, eval=FALSE}
+scripts/build.sh
+scripts/run_local.sh africa
+```
+
+## Saved evidence (keyword = africa, whole word, case-insensitive)
+```{bash evidence}
+cat evidence/output_whole_word/part-r-00000
+```

@@ -1,0 +1,23 @@
+---
+title: "Question 2 - LDA topic modelling of the SA news corpus"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+knitr::opts_knit$set(root.dir = normalizePath("../Q2_LDA"))
+```
+
+## 2.1 Data frame and denoising
+The script `lda_news.R` builds `data.frame(file_name, content)`, then removes URLs, e-mails, HTML,
+punctuation, numbers, short tokens, stop-words, calendar words and the "SAnews.gov.za" sign-off.
+
+## 2.2 LDA (Gibbs sampling) and 2.3 visualisations
+```{r run, results='hold'}
+system2("Rscript", c("lda_news.R", "3", "10"))
+```
+
+```{r figs, out.width="90%"}
+knitr::include_graphics(normalizePath(file.path("output", c("fig1_top_terms_bars.png", "fig2_wordclouds.png",
+                                              "fig3_doc_topic_heatmap.png", "fig4_topic1_vs_topic2.png"))))
+```

@@ -1,0 +1,19 @@
+---
+title: "Question 3 - WebText API proof of concept"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+knitr::opts_knit$set(root.dir = normalizePath("../Q3_WebText"))
+```
+
+## 3.1 - 3.3 Run the pipeline on a live URL
+Change the URL to any page whose robots.txt allows scraping (default: a Wikipedia article).
+```{r run, results='hold'}
+system2("Rscript", c("webtext.R", "https://en.wikipedia.org/wiki/Natural_language_processing"))
+```
+```{r figs, out.width="80%"}
+knitr::include_graphics(normalizePath(file.path("output", c("fig1_top_words.png", "fig2_wordcloud.png",
+                                              "fig3_sentence_scores.png", "fig4_textrank_graph.png"))))
+```
